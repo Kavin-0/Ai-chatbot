@@ -3,6 +3,10 @@ from pydantic import BaseModel
 
 from database import engine, SessionLocal
 from models import Base, Student
+from fastapi import Depends, FastAPI
+from sqlalchemy.orm import Session
+
+from database import SessionLocal, engine, get_db
 app = FastAPI()
 
 @app.get("/")
@@ -66,15 +70,9 @@ def add_student(student: StudentRequest):
 
 # Get All Students
 @app.get("/students")
-def get_students():
-
-    db = SessionLocal()
-
+def get_students(db: Session = Depends(get_db)):
     students = db.query(Student).all()
-
-    db.close()
-
-    return students
+    return students 
     
 
 
