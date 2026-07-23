@@ -109,3 +109,6 @@ from database import engine
 from models import Base
 
 Base.metadata.create_all(bind=engine)
+from routers.chat import router as chat_router
+
+app.include_router(chat_router)
