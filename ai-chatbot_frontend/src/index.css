@@ -1,1 +1,61 @@
-html,body,#root{min-width:320px;min-height:100%;margin:0}body{background:#faf9f7} 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-base: #0a0b0f;
+  --bg-surface: #111218;
+  --bg-card: #16181f;
+  --bg-elevated: #1d1f28;
+  --bg-hover: #22242e;
+
+  --border: rgba(255,255,255,0.06);
+  --border-strong: rgba(255,255,255,0.12);
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #8b8d9a;
+  --text-muted: #55576a;
+
+  --accent: #7c6af7;
+  --accent-glow: rgba(124, 106, 247, 0.3);
+  --accent-subtle: rgba(124, 106, 247, 0.08);
+  --accent-hover: #8f7fff;
+  --accent-dark: #5a48d0;
+
+  --green: #3ecf8e;
+  --green-subtle: rgba(62, 207, 142, 0.1);
+  --red: #f87171;
+  --amber: #fbbf24;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --shadow-glow: 0 0 40px rgba(124, 106, 247, 0.15);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-float: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
